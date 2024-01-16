@@ -155,7 +155,11 @@ preferably you should identify them in a reproducible way with some code.
 ```{r exercise-8}
 hotels %>%
   filter(adr < 0) %>%
-  select(hotel, little_ones, )
+  select(hotel, adr, adults, children, babies, arrival_date_month, arrival_date_year
+        )
+hotels %>%
+  filter(adr > 5000) %>%
+  select(hotel, adr, adults, children, babies, arrival_date_month, arrival_date_year )
 ```
 
 
